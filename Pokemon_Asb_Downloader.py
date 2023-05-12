@@ -160,4 +160,7 @@ with open(file_path, "rb") as f:
     # delete ABA_Decryptor.exe file
     decryptor_file_path = os.path.join("downloaded_files", "ABA_Decryptor.exe")
     os.remove(decryptor_file_path)
-os.remove(file_path)
+
+sndKeepInput = input("Do you want to delete or keep the Assetbundle file? BTW Those are ur options: ")
+if sndKeepInput == "delete":
+    os.remove(file_path)
