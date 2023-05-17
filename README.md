@@ -7,3 +7,6 @@ Thanks to ChicoEevee for their MD_AssetbundleVer.snd file version script thingy,
 
 
 BTW, in the future, as long as The Big Guys don't change the way the app handles, when there are eventually 20 file versions, the program won't download any more than that. Just put an issue and Ill expand that value to 40 for now.
+
+
+If requirements.txt is missing stuff lmk
