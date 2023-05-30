@@ -1052,31 +1052,7 @@ def get_file_size(url):
 
 
 def print_cube(num):
-    count = 0
-    verId = []
-    for i in range(0, 111000, 100):
-        mdver = 50000 + i
-        url = f'https://resource.pokemon-home.com/{str(calculate_file_hash(mdver))}/md/dro/diff/MD_AssetbundleDLPackVer.snd'
-        if count > 20:
-            break
-        try:
-            urllib.request.urlopen(url)
-            count += 1
-            verId.append(mdver)
-        except urllib.error.HTTPError as e:
-            # Return code error (e.g. 404, 501, ...)
-            # ...
-            count += 1
-            continue
-        except urllib.error.URLError as e:
-            # Not an HTTP-specific error (e.g. connection refused)
-            # ...
-            count += 1
-            continue
-        else:
-            count += 1
-            continue
-    version = verId[-1]
+    version = 58800
     print(f"Latest version = {version}")
     download_url = f'https://resource.pokemon-home.com/{str(calculate_file_hash(version))}/md/dro/diff/MD_AssetbundleDLPackVer.snd'
     download_folder = "downloaded_files"
@@ -1178,9 +1154,6 @@ with open(file_path, "rb") as f:
             input_ID = pokemon_array.index(user_input)
             real_ID = int(input_ID) + 1
 
-            if real_ID > 905:
-                print("The Pokemon isn't in Home yet. Please wait until the Home update.")
-                continue
 
             real_ID = pad_number_with_zeros(real_ID)
             files_to_download = [e for e in assets if real_ID in e['nm']]
