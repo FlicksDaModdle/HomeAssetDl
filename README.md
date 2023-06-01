@@ -10,3 +10,5 @@ BTW, in the future, as long as The Big Guys don't change the way the app handles
 
 
 If requirements.txt is missing stuff lmk
+
+with new update, stuff doesn't work for gen 9. I'm archiving it, check out razmoth's homemanager. you'll need chicoeevee's assetstudio, get the latest action. and also uabea for emi textures
